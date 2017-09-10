@@ -64,7 +64,7 @@ int main()
     ComputeEngine::SubmitCommand(gpus[0], command_buffer, fence);
 
     //Use fence to wait for gpu command to finish
-    vkWaitForFences(gpus[0].device, 1, &fence, VK_TRUE, 1000000000000);
+    vkWaitForFences(gpus[0].device, 1, &fence, VK_TRUE, 10);
 
     //Save Rendered Image
     SaveRenderedImage(sizeof(Pixel) * 3200 * 2400, gpus[0].device, buffer_object.device_memory);

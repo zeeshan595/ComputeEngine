@@ -1,5 +1,6 @@
 void ComputeEngine::DestroyDescriptorSet(ComputeEngine::SupportedDevice supported_device, ComputeEngine::VulkanDescriptor descriptor)
 {
+    vkFreeDescriptorSets(supported_device.device, descriptor.descriptor_pool, 1, &descriptor.descriptor_set);
     vkDestroyDescriptorPool(supported_device.device, descriptor.descriptor_pool, NULL);
     vkDestroyDescriptorSetLayout(supported_device.device, descriptor.descriptor_layout, NULL);
 }
