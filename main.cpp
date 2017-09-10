@@ -67,7 +67,7 @@ int main()
     vkWaitForFences(gpus[0].device, 1, &fence, VK_TRUE, 10);
 
     //Save Rendered Image
-    SaveRenderedImage(sizeof(Pixel) * 3200 * 2400, gpus[0].device, buffer_object.device_memory);
+    SaveRenderedImage(sizeof(Pixel) * WIDTH * HEIGHT, gpus[0].device, buffer_object.device_memory);
 
     //Destroy fence
     ComputeEngine::DestroyFence(gpus[0], fence);
