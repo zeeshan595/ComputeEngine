@@ -1,3 +1,3 @@
-#ComputeEngine
+Compute Engine
 
-This used vulkan API and the power of a GPU to perform computations.
+This uses the power of vulkan API to perform math computations on the graphics card.
